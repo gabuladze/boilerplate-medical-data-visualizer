@@ -53,7 +53,7 @@ def draw_heat_map():
     fig, ax = plt.subplots()
 
     # Draw the heatmap with 'sns.heatmap()'
-    ax = sns.heatmap(corr, mask=mask, annot=True, fmt='.1f', vmax=0.3)
+    sns.heatmap(corr, mask=mask, annot=True, fmt='.1f', vmax=0.3, ax=ax)
 
     # Do not modify the next two lines
     fig.savefig('heatmap.png')
